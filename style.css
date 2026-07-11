@@ -1,1 +1,210 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #020b2d;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Céu estrelado */
+
+#stars {
+    position: fixed;
+    inset: 0;
+    background:
+    radial-gradient(circle at 20% 20%, white 1px, transparent 2px),
+    radial-gradient(circle at 80% 30%, white 1px, transparent 2px),
+    radial-gradient(circle at 40% 70%, white 1px, transparent 2px),
+    radial-gradient(circle at 70% 80%, white 1px, transparent 2px);
+    background-size: 200px 200px;
+    animation: estrelas 8s linear infinite;
+    z-index: -1;
+}
+
+@keyframes estrelas {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-100px);
+    }
+
+}
+
+
+/* Primeira tela */
+
+.hero {
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+}
+
+
+.hero h3 {
+
+    font-size: 18px;
+    font-weight: 300;
+
+}
+
+
+.hero h1 {
+
+    font-family: 'Great Vibes', cursive;
+    font-size: 70px;
+    margin: 20px 0;
+    color: #d9e9ff;
+
+}
+
+
+.hero p {
+
+    max-width: 500px;
+    line-height: 1.8;
+
+}
+
+
+button,
+.botao {
+
+    margin-top: 30px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    border: none;
+    background: #6ca6ff;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+
+button:hover,
+.botao:hover {
+
+    opacity: 0.8;
+
+}
+
+
+/* Seções */
+
+.section {
+
+    padding: 80px 25px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+
+}
+
+
+.section h2 {
+
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #d9e9ff;
+
+}
+
+
+.section p {
+
+    line-height: 2;
+    font-size: 17px;
+
+}
+
+
+/* Fotos */
+
+.galeria {
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+
+.galeria img {
+
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid rgba(255,255,255,0.3);
+
+}
+
+
+/* Carta */
+
+.carta {
+
+    background: rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+
+}
+
+
+/* Final */
+
+.final {
+
+    min-height: 80vh;
+
+}
+
+
+footer {
+
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+
+}
+
+
+/* Celular */
+
+@media(max-width:600px){
+
+.hero h1 {
+
+    font-size: 55px;
+
+}
+
+.section h2 {
+
+    font-size: 28px;
+
+}
+
+}
